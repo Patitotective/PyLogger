@@ -41,12 +41,21 @@ class Logger:
         with open(self.filename, "a" if not self.renew else "w") as file: # Append to the file or overwrite the file with the time
             file.write(f"--- [{self.time()}] ---\n") # Write time func 
 
-    def log(self, event: str):
+    def log(self, event: any):
         """
         """
-        print(event)
+
         with open(self.filename, "a") as file: # Open file to append
             file.write(f"[{self.time()}] {event}\n") # Write the time func and the given text
+
+    def multiple_log(self, events: list):
+        """
+        """
+        events = list(events)
+
+        with open(self.filename, "a") as file: # Open file to append
+            for event in events:
+                file.write(f"[{self.time()}] {event}\n") # Write the time func and the given text
 
     def delete_log(self):
         """
