@@ -39,7 +39,7 @@ This file should look like:
 [2021-08-09 10:43:00.813151] Successfully created file
 ``` 
 
-If you want to log some large list, instead of using `log` function use `multiple_log` which expects a list (anyways convert the given parameter into a list) and writes the log more efficiently
+If you want to log some large list, instead of using `log` function use `multiple_log` which expects a list (anyways convert the given parameter into a list) and writes the multiple logs with more efficiency.
 
 Every time you run this program it will append more logs to the already existent one, if you want to replace the old file with the new, set `renew` parameter to `True`.  
 Example:
