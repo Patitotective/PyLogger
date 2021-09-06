@@ -1,9 +1,6 @@
 # Libraries
-import datetime
-import os
-from pynput import keyboard
-from pynput import mouse
-import time
+import datetime,os,time
+from pynput import *
 
 class Logger:
     """Simple class to create log events.
